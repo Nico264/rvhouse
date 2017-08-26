@@ -529,7 +529,7 @@ house_app::_handle_global_ignore(::message *msg) {
 
     mb->global_ignore(true);
 
-    auto_ptr<message_block_users> mb_guard(mb);
+    std::auto_ptr<message_block_users> mb_guard(mb);
 
     for (; i != m->ip_end(); i++) {
         const std::string &ipstr   = i->ip;
